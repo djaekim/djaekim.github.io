@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Antonescu</title>
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom fonts for this template -->
+      <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+      <link href="css/main.css" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Custom styles for this template -->
+      <style>
+    @-moz-keyframes spin {
+      100% {
+          -moz-transform: rotatey(360deg);
+      }
+    }
+    @-webkit-keyframes spin {
+        100% {
+            -webkit-transform: rotatey(360deg);
+        }
+    }
+    @keyframes spin {
+        100% {
+            -webkit-transform: rotatey(360deg);
+            transform:rotatey(360deg);
+        }
+    }
+    img:hover{
+       -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+    cursor:pointer;
+    }
+
+ 
+
+
+      </style>
+   </head>
+  
+   <body style='background-color:black'>
+    
+
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto" style='color:azure; font-family:"VT323"; margin-top: 100px;'>
+               <div class='content' style='text-align:center;'>
+               <h1>For Scientists</h1>
+               <img src='img/sci.jpg' style='margin-bottom:100px;border-radius: 5px;'>
+               <h1>For Enthusiasts</h1>
+               <img src='img/enthu.png' onclick="window.location.href='Enthusiasts.html'" style='margin-bottom:100px;border-radius: 5px;'>
+            </div>
+            </div>
+         </div>
+      </div>
+     
+      
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script>
+         "use strict";
+
+var canvas = document.getElementById('canvas'),
+  ctx = canvas.getContext('2d'),
+  w = canvas.width = window.innerWidth,
+  h = canvas.height = window.innerHeight,
+    
+  hue = 217,
+  stars = [],
+  count = 0,
+  maxStars = 1400;
+
+// Thanks @jackrugile for the performance tip! https://codepen.io/jackrugile/pen/BjBGoM
+// Cache gradient
+var canvas2 = document.createElement('canvas'),
+    ctx2 = canvas2.getContext('2d');
+    canvas2.width = 100;
+    canvas2.height = 100;
+var half = canvas2.width/2,
+    gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+    gradient2.addColorStop(0.025, '#fff');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+    gradient2.addColorStop(1, 'transparent');
+
+    ctx2.fillStyle = gradient2;
+    ctx2.beginPath();
+    ctx2.arc(half, half, half, 0, Math.PI * 2);
+    ctx2.fill();
+
+// End cache
+
+function random(min, max) {
+  if (arguments.length < 2) {
+    max = min;
+    min = 0;
+  }
+  
+  if (min > max) {
+    var hold = max;
+    max = min;
+    min = hold;
+  }
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function maxOrbit(x,y) {
+  var max = Math.max(x,y),
+      diameter = Math.round(Math.sqrt(max*max + max*max));
+  return diameter/2;
+}
+
+var Star = function() {
+
+  this.orbitRadius = random(maxOrbit(w,h));
+  this.radius = random(60, this.orbitRadius) / 12;
+  this.orbitX = w / 2;
+  this.orbitY = h / 2;
+  this.timePassed = random(0, maxStars);
+  this.speed = random(this.orbitRadius) / 50000;
+  this.alpha = random(2, 10) / 10;
+
+  count++;
+  stars[count] = this;
+}
+
+Star.prototype.draw = function() {
+  var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+      y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+      twinkle = random(10);
+
+  if (twinkle === 1 && this.alpha > 0) {
+    this.alpha -= 0.05;
+  } else if (twinkle === 2 && this.alpha < 1) {
+    this.alpha += 0.05;
+  }
+
+  ctx.globalAlpha = this.alpha;
+    ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+  this.timePassed += this.speed;
+}
+
+for (var i = 0; i < maxStars; i++) {
+  new Star();
+}
+
+function animation() {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 0.8;
+    ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+    ctx.fillRect(0, 0, w, h)
+  
+  ctx.globalCompositeOperation = 'lighter';
+  for (var i = 1, l = stars.length; i < l; i++) {
+    stars[i].draw();
+  };  
+  
+  window.requestAnimationFrame(animation);
+}
+
+animation();
+      </script>
+      
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Custom scripts for this template -->
+   </body>
+</html>
