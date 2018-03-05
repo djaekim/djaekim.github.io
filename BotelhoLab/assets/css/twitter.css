@@ -1,0 +1,25 @@
+.timeline-Widget--edge{
+	border-radius: 0 !important;
+}
+.timeline-Widget{
+	border-radius: 0 !important;
+	margin:20px 0px;
+	    background-color: #ffffff00 !important;
+	    color:white !important;
+}
+
+.timeline-Footer {
+    padding :0px !important;
+    font-size: 12px;
+}
+.timeline-Header-title{
+	color:azure !important;
+}
+
+.timeline-Body,
+.timeline-Header-title {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
