@@ -17,12 +17,44 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
+
   <!-- Custom styles for this template -->
   <link href="css/freelancer.css" rel="stylesheet">
+  <style>
+    a:focus {
+      outline: none;
+      color: none;
+    }
+
+    .colored {
+      font-size: 75px;
+      padding: 25px;
+    }
+
+    section {
+      border-bottom: 1px solid #dee2e6;
+    }
+    .big{
+      font-weight:900;
+      margin-top:30px;
+      text-align:center;
+      width:100%;
+    }
+    .big::before{
+      content: "(";
+    }
+    .big::after{
+      content: ")";
+    }
+    #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+      color: rgba(33, 37, 41, 0.5);
+}
+  </style>
 
 </head>
 
@@ -42,7 +74,16 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
           </li>
-
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#learning">Learning</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+   
 
         </ul>
       </div>
@@ -56,15 +97,30 @@
     </div>
 
     <div class="container">
-      <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.jpg" style='height:200px; border-radius:50%; box-shadow:0 4px 20px #505050'
+      <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.jpg" style='border: .5rem solid rgba(255,255,255,.2);height:200px; border-radius:50%; '
         alt="">
-      <h1 class="text-uppercase mb-0">d.jae </h1>
+      <h1 class="text-uppercase mb-0">d.jae kim </h1>
       <br>
       <h2 class="font-weight-light mb-0">BIOCHEMIST + FREELANCE WEB DEVELOPER </h2>
-      <br> I studied Biochemistry at McGill University. In my final year of University, I decided to attend another academic
-      year to explore Computer Science. This was a positive experience. The courses were very exciting, the class environments
-      and projects fostered collaboration and creativity. It was never learned previously and all I needed was a laptop.
+      <br>
+      <p> I studied Biochemistry at McGill University. In my final year of University, I decided to attend another academic year
+        to explore Computer Science. This was a positive experience. The courses were very exciting, the class environments
+        and projects fostered collaboration and creativity. It was never learned previously and all I needed was a laptop.
+      </p>
     </div>
+
+
+
+
+    <!-- <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-0">
+      <h5 class='resume' style='display:inline-block;padding:5px; cursor:pointer; color:white'>
+          <i class="fa fa-2x fa-file-text-o"></i> 
+          <br>
+          Resume
+      </h5>
+    </a> -->
+
+
   </header>
 
   <!-- Portfolio Grid Section -->
@@ -147,6 +203,124 @@
     </div>
   </section>
 
+  <!-- Resume -->
+  <section class="portfolio" id="learning">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">learning</h2>
+      <br>
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-7">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                Bootstrap Summary
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/bootstrap.png" alt="">
+          </a>
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </div>
+    </div>
+  </section>
+  <!-- skills -->
+  <section class="portfolio" id="skills">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Skills</h2>
+      <br>
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <h5 style='margin: 50px 50px 50px 0'>PROGRAMMING LANGUAGES & TOOLS</h5>
+          <i class="devicon-html5-plain-wordmark colored"></i>
+          <i class="devicon-css3-plain-wordmark colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+          <i class="devicon-jquery-plain colored"></i>
+          <i class="devicon-sass-original colored"></i>
+          <i class="devicon-bootstrap-plain colored"></i>
+          <i class="devicon-chrome-plain colored"></i>
+          <i class="devicon-visualstudio-plain colored"></i>
+          <h5 style='margin: 50px 50px 50px 0'>DABBLED LANGUAGES</h5>
+          <i class="devicon-php-plain colored"></i>
+          <i class="devicon-mysql-plain colored"></i>
+          <h5 style='margin: 50px 50px 50px 0'>WORK FLOW</h5>
+          <ul class="mb-5">
+            <li>Desktop First & Responsive Design </li>
+            <li>Cross Browser Testing & Debugging using
+              <a href="https://caniuse.com/" target="_blank"> caniuse </a>
+            </li>
+
+          </ul>
+          <h5 style='margin: 50px 50px 50px 0'>Currently Learning</h5>
+          <i class="devicon-angularjs-plain colored"></i>
+
+          <i class="devicon-nodejs-plain colored"></i>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </section>
+  <!-- interests -->
+  <section class="portfolio" id="interests">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Interests</h2>
+      <br>
+      <br>
+      <br>
+      <h5 style='margin: 50px 50px 50px 0'>Apart from web development, I enjoy most of my time being outdoors. </h5>
+      <p class="mb-5 big"> In the winter, I enjoy tennis, snowshoeing and indoor sports like squash... </p>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <img class="img-fluid" src="img/portfolio/tennisGoat.jpg" alt="">
+          <p> Playing tennis below -25 degrees at High Park Toronto (taken by
+            <a target="_blank" href="https://www.thestar.com/news/starweather/2017/12/30/toronto-could-see-record-low-temperatures-for-new-years-eve-and-new-years-day.html">
+            Toronto Star </a>) ps. Yes... I shoveled the snow. </p>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="img/portfolio/snowShoe.jpg" alt="">
+            <p> I am an avid hiker (snowshoeing at Val David, Quebec) </p>
+            </a>
+          </div>
+         
+       
+
+      </div>
+<!--  google map api key =  AIzaSyByktwi-FDyohR5z9i8TBJ3J8dzrY2l1pA
+-->
+
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+
 
 
 
@@ -166,7 +340,21 @@
   </div>
 
   <!-- Portfolio Modals -->
+  <!-- Portfolio Modal 0 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-0">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button  d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Portfolio Modal 1 -->
   <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
     <div class="portfolio-modal-dialog bg-white">
@@ -240,7 +428,7 @@
             <br>
 
 
-            <a class="btn btn-primary btn-lg rounded-pill" target="_blank"  href="https://djaekim.github.io/AntonescuLab/">
+            <a class="btn btn-primary btn-lg rounded-pill" target="_blank" href="https://djaekim.github.io/AntonescuLab/">
               <i class="fa fa-check-square-o"></i>
               Open AntonescuLab</a>
           </div>
@@ -377,6 +565,65 @@
             <a class="btn btn-primary btn-lg rounded-pill" target="_blank" href="https://djaekim.github.io/PureCSSTennisWebsiteDesign/">
               <i class="fa fa-check-square-o"></i>
               Open Tennis Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 7 -->
+  <div class="portfolio-modal mfp-hide" id="portfolio-modal-7">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button  d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h4> Grid: Rows and Coloumns</h4>
+            <ul class="mb-5">
+              <li>Rows are block level - takes up entire width of element its in</li>
+              <li>Only Col are direct child of Row and all the contents should go inside col</li>
+              <li> Cols horizontally aligns in grid. The Cols have 15px left/right padding to evenly space grid. Thus,row has
+                -15px left/right padding to compensate the first and last col..</li>
+
+              <li>Rows are divded into 12 equal parts. When we put col inside rows, we need to specify number of parts the col
+                is going to take up</li>
+              <li>If col parts exceeeds 12, it wraps to the next line</li>
+              <br>
+              <h4>Screen size</h4>
+              <ul class="mb-5">
+
+                <li>xs - Smartphones / extra small</li>
+                <li>sm - tablets / small</li>
+                <li>md - laptop / medium</li>
+                <li>lg - large high resolution screens / large</li>
+
+
+              </ul>
+            </ul>
+            <h4> Clearfix </h4>
+            <ul class="mb-5">
+              <li> when a col has much more content, thus height then the ones after it, the layout breaks (may pile up). Thus,
+                we can use clearfix. It forces all columns after it move to the new line </li>
+            </ul>
+            <h4> Offset </h4>
+            <ul class="mb-5">
+              <li> To create margin on the left of the coloumn we use offset </li>
+              <li> Ex: col-md-6 col-md-offet-3 </li>
+              <br> by default, without offset, any excess space right of coloumns remain empty. So, by using offset, we could
+              push it to the right
+            </ul>
+            <h4> Push and Pull </h4>
+            <ul class="mb-5">
+              <li>reorder columns depending on screen size. </li>
+              <li> Push moves coloumns to right, pull moves coloumns to left </li>
+              <li> it uses position relative thus doesn't effect other columns </li>
+              <li>Ex: col-xs-4 col-md-push-8 </li>
+              <br> On bigger screen it coloumns will have 8 space on the right, but on the smaller screen, it will have 4 space
+              on left..
+            </ul>
+
+
           </div>
         </div>
       </div>
