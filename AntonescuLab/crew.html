@@ -345,11 +345,12 @@
     <script>
       $(window).on("load", function () {
 
-        $('#loading').fadeOut(100);
+       
         setInterval(function () {
-          $('#bodyholder').fadeIn();
+          $('#loading').fadeOut(100);
+          $('#bodyholder').fadeIn(1000);
 
-        }, );
+        }, 2000);
       });
     </script>
     <!-- Custom scripts for this template -->
