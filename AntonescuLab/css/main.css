@@ -502,7 +502,7 @@ footer .copyright {
       width: 100%;
     
     color:white;
-        background-image: linear-gradient(to right, #72d9ffc5, #00aeef);
+        background-image: linear-gradient(to right, rgba(0, 175, 239, 0.6), rgb(0, 174, 239));
    /*  background-color:#00aeef; */
    
     
