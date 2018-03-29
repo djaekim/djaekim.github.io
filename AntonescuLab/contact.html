@@ -51,11 +51,17 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="publication.html"> Publication </a>
+            <a class="nav-link" href="publication.html"> Publications </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="crew.html">Crew</a>
+            <a class="nav-link" href="crew.html">Team</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="funding.html">Funding</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
         </ul>
       </div>
     </div>
@@ -65,7 +71,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-10 mx-auto">
-        <div class="site-heading" style='margin-top:200px'>
+        <div class="site-heading" style='margin-top:200px; font-size:0.8em'>
           <div class="container">
             <div class="row">
               <div class="heading-title" style='margin:0 auto; text-align:center'>
@@ -74,20 +80,32 @@
               </div>
               <div class="col-xs-12 col-md-6">
                 <h3>
-                  <strong>Address</strong>
-                </h3>
-                <p> 350 Victoria Street Toronto, Ontario
-                  <br>Canada M5B 2K3 </p>
+                  <strong>Lab</strong>
+                </h3><p>
+                Ryerson MaRS Research Labs <br>
+                MaRS West Tower <br>
+                661 University Ave, suite 661 <br>
+                Toronto, ON, Canada, M5G 1M1 <br>
+                phone: 416-979-5000 x553833
+                </p>
                 <h3>
-                  <strong>Email</strong>
+                  <strong>Office</strong>
                 </h3>
 
-                <a href="mailto:cantonescu@ryerson.ca">cantonescu@ryerson.ca</a>
+            <!--     <a href="mailto:cantonescu@ryerson.ca">cantonescu@ryerson.ca</a> -->
+              <p>
+                  Department of Chemistry and Biology<br>
+                  350 Victoria Street<br>
+                  Kerr Hall East, 328A<br>
+                  Toronto, ON, Canada M5B 2K3 <br>
+                  <a href="mailto:cantonescu@ryerson.ca">cantonescu@ryerson.ca</a>
+                  
+              </p>
               </div>
               <div class="col-xs-12 col-md-6" style='margin-bottom:100px'>
-                <img src="img/ryerson.jpg" alt="ryerson" style='width:100%;    box-shadow: 10px 10px 0px #666;
-                -moz-box-shadow: 10px 10px 0px #666;
-                -webkit-box-shadow: 10px 10px 0px #666; border:1px solid rgb(196, 196, 196)'>
+                <img src="img/ryerson.jpg" alt="ryerson" style='width:100%;    box-shadow: 10px 10px 0px rgb(186, 186, 186);
+                -moz-box-shadow: 10px 10px 0px rgb(186, 186, 186);
+                -webkit-box-shadow: 10px 10px 0px rgb(186, 186, 186); '>
                
               </div>
               
@@ -107,6 +125,18 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script>
+        var prev = 0;
+   $(window).on('scroll', function () {
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > prev) {
+        $('#mainNav').slideUp();
+      } else {
+        $('#mainNav').slideDown();
+      }
+      prev = scrollTop;
+    });
+  </script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Custom scripts for this template -->
 
