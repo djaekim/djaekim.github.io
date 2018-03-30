@@ -21,34 +21,7 @@
     rel='stylesheet' type='text/css'>
   <!-- Custom styles for this template -->
   <style>
-    #banner {
-      background: linear-gradient(to right, #72d9ff, rgb(214, 214, 214));
-      background-size: cover;
-      display: block !important;
-      opacity: 1;
-    }
-
-    #triangle {
-      width: 0;
-      height: 0;
-      border-bottom: 25vw solid white;
-      border-left: 100vw solid transparent;
-      display: block;
-      position: absolute;
-      bottom: 0 !important;
-      right: 0 !important;
-    }
-
-    #triangle-top {
-
-      width: 0;
-      height: 0;
-      border-top: 25vw solid white;
-      border-right: 100vw solid transparent;
-      display: block;
-      position: absolute;
-    }
-
+  
 
     .main-topic {
       width: 100%;
@@ -59,11 +32,7 @@
 
     }
 
-    #myVideo {
 
-      width: 100%;
-      height: 100%;
-    }
 
     .content {
 
@@ -97,39 +66,14 @@
     p {
       margin: 30px 0;
     }
+    @media only screen and (max-width: 400px) {
 
-    /*
-    @-webkit-keyframes arrow-down{
-      0% {
-        margin-top: 0%;
-      }
-      50% {margin-top: 5%;}
-      100% { margin-top: 0%;}
-}
-@-moz-keyframes arrow-down{
-  0% {
-        margin-top: 0%;
-      }
-      50% {margin-top: 5%;}
-      100% { margin-top: 0%;}
-}
-@-o-keyframes arrow-down{
-  0% {
-        margin-top: 0%;
-      }
-      50% {margin-top: 5%;}
-      100% { margin-top: 0%;}
-}
-@keyframes arrow-down{
-  0% {
-        margin-top: 0%;
-      }
-      50% {margin-top: 5%;}
-      100% { margin-top: 0%;}
-}
-.drop-section:hover .fa-arrow-down{
-  animation: arrow-down 2s infinite;
-}*/
+        p {
+          font-size:0.7em;
+        }
+      
+    }
+
   </style>
 </head>
 
@@ -142,7 +86,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style='position:fixed; top:0'>
     <div class="container">
-      <img src='img/ryerson.png' style='width:60px'>
+      <img src='img/ryerson.png' style='width:60px'  id='ryersonLogo'>
       <a class="navbar-brand nav-link" href="index.html">Antonescu Lab</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -191,7 +135,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="row" style='margin-top:15%'>
-            <div class="col-xs-12" style='font-size:0.8em'>
+            <div class="col-xs-12" style='font-size:0.8em' id='researchProfile'>
 
               <p> Cells are made up of diverse and interconnected signaling networks that control every aspect of cell function
                 and physiology. These signaling networks are able to respond to various cues, either extrinsic (e.g. growth
@@ -281,7 +225,7 @@
                   represent important platforms sensitive to multiple signaling cues and inputs, and thus represent a core
                   node in cross-talk between different signaling pathways and systems.</p>
                 <div class="drop-section-img" style='margin-bottom:10px'>
-                  <video style='height:100%;' autoplay loop>
+                  <video style='height:100%;' controls>
                     <source src="img/for-researchers/Figure3A.mp4" style='width:100%;height:100%; ' type="video/mp4"></source>
                   </video>
                 </div>
@@ -493,6 +437,7 @@
     var menutime;
     var prev = 0;
 
+  /*
     $(window).on('scroll', function () {
       var scrollTop = $(window).scrollTop();
       if (scrollTop > prev) {
@@ -501,7 +446,7 @@
         $('#mainNav').slideDown();
       }
       prev = scrollTop;
-    });
+    });*/
 
     function showOptionsMenu(button, caption) {
       clearInterval(menutime);

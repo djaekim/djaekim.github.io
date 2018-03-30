@@ -36,6 +36,27 @@
       animation-name: headerSlideUp;
       animation-duration: 2s;
     }
+    @media only screen and (max-width: 400px) {
+      #labIntro {
+        font-size: 0.6em !important;
+      }
+      .site-heading h1{
+        border: 1px solid transparent !important;
+        font-size:0.95em !important;
+      }
+      .masthead{
+        min-height:400px !important;
+      }
+      .border5 h5{
+        font-size:12px !important;
+      }
+      .border5{
+        height:125px;
+      }
+      .details-button a{
+        font-size:0.8em !important;
+      }
+    }
   </style>
 </head>
 
@@ -43,7 +64,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style='display:none; position:fixed; top:0'>
     <div class="container">
-      <img src='img/ryerson.png' style='width:60px'>
+      <img src='img/ryerson.png' style='width:60px' id='ryersonLogo'>
       <a class="navbar-brand nav-link" href="index.html">Antonescu Lab</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,7 +157,7 @@
     <div class="row">
       <div class="col-lg-10 col-md-7 mx-auto" style='text-align:center; margin-bottom:50px'>
 
-        <p style='text-align:center;font-size:17px'>
+        <p style='text-align:center;font-size:17px' id='labIntro'>
 
           We are a cell biology laboratory interested in fundamental cellular processes that when disrupted contribute to cancer progression.
           We study a number of dynamic nanoscale molecular assemblies such as
@@ -237,7 +258,7 @@
                   target='_blank'> Get Pre-print </a>
               </button>
             </div>
-            <div class="col-md-7 border7">
+            <div class="col-md-7 border7 col-xs-push-7">
               <div id="carousel-2" class="carousel slide" data-ride="carousel">
                 <!-- <ol class="carousel-indicators">
                   <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
@@ -283,6 +304,7 @@
     var str = 'Cell Surface Biology Laboratory at Ryerson University';
     var i = 0;
     var prev = 0;
+    var index = 0;
     var speed = 50;
 
 
@@ -295,7 +317,7 @@
       setTimeout(type, 3000);
 
     });
-
+/*
     $(window).on('scroll', function () {
       var scrollTop = $(window).scrollTop();
       if (scrollTop > prev) {
@@ -304,19 +326,46 @@
         $('#mainNav').slideDown();
       }
       prev = scrollTop;
-    });
+    });*/
 
     function slider() {
-      var index = 0;
+
       setInterval(function () {
         prev = index;
         index = ++index;
 
-        $('#slide' + (index % 5)).fadeIn(2000);
-        $('#slide' + (prev % 5)).fadeOut(2000);
-      }, 5000);
+        $('#slide' + (index % 5)).fadeIn(100);
+        $('#slide' + (prev % 5)).fadeOut(100);
+      }, 6000);
     }
     slider();
+
+   /* function type() {
+
+
+      if (i < str.length) {
+
+        document.getElementById("type").innerHTML += str.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        icons_appear();
+      }
+
+
+    } */
+/*    function icons_appear() {
+      $('.fa-envelope-o, .fa-twitter').fadeIn(1000);
+    }
+
+    $('.buttons').on('mouseover', function(){
+
+      $(this).css('z-index', 1000);
+      $(this).css('')
+    });
+*/
+
+
 
   </script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
