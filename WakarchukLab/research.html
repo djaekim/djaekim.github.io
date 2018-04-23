@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--name">
+
+                        Wakarchuk Lab
+                        <span style='color:#777;  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                                          '> @RES </span>
+                    </span>
+                    <span class="heading-primary--sub">
+                        <span style='color:#959595; font-weight:900'> Glycobiology Research at Ryerson University </span>
+                    </span>
+                </h1>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style='margin:0 auto;s'>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pub.html">Publication</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">Team</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+    <main>
+        
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/Three49custom.js"></script>
+    <script type="text/javascript" src="js/GLmol.js"></script>
+
+    <script type="text/javascript">
+
+        // Proteins can also be embedded in the page but 
+        //  you might want to keep it separate.s
+
+        var glmol01 = new GLmol('glmol01', true);
+        glmol01.defineRepresentation = function () {
+            var all = this.getAllAtoms();
+            var hetatm = this.removeSolvents(this.getHetatms(all));
+            this.colorByAtom(all, {});
+            this.colorByChain(all);
+            var asu = new THREE.Object3D();
+
+            this.drawBondsAsStick(asu, hetatm, this.cylinderRadius, this.cylinderRadius);
+            this.drawBondsAsStick(asu, this.getResiduesById(this.getSidechains(this.getChain(all, ['A'])), [58, 87]), this.cylinderRadius, this.cylinderRadius);
+            this.drawBondsAsStick(asu, this.getResiduesById(this.getSidechains(this.getChain(all, ['B'])), [63, 92]), this.cylinderRadius, this.cylinderRadius);
+            this.drawCartoon(asu, all, this.curveWidth, this.thickness);
+
+            this.drawSymmetryMates2(this.modelGroup, asu, this.protein.biomtMatrices);
+            this.modelGroup.add(asu);
+        };
+
+        $.get("5otq.pdb", function (ret) {
+            $("#glmol01_src").val(ret);
+            glmol01.loadMolecule();
+        });
+        var glmol02 = new GLmol('glmol02', true);
+        glmol02.defineRepresentation = function () {
+            var all = this.getAllAtoms();
+            var hetatm = this.removeSolvents(this.getHetatms(all));
+            this.colorByAtom(all, {});
+            this.colorByChain(all);
+            var asu = new THREE.Object3D();
+
+            this.drawBondsAsStick(asu, hetatm, this.cylinderRadius, this.cylinderRadius);
+            this.drawBondsAsStick(asu, this.getResiduesById(this.getSidechains(this.getChain(all, ['A'])), [58, 87]), this.cylinderRadius, this.cylinderRadius);
+            this.drawBondsAsStick(asu, this.getResiduesById(this.getSidechains(this.getChain(all, ['B'])), [63, 92]), this.cylinderRadius, this.cylinderRadius);
+            this.drawCartoon(asu, all, this.curveWidth, this.thickness);
+
+            this.drawSymmetryMates2(this.modelGroup, asu, this.protein.biomtMatrices);
+            this.modelGroup.add(asu);
+        };
+
+        $.get("4hhb.pdb", function (ret) {
+            $("#glmol02_src").val(ret);
+            glmol02.loadMolecule();
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
