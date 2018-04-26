@@ -290,6 +290,26 @@ p {
   .research-menu:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px; }
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg); }
+
+.arrow {
+  cursor: pointer; }
+
+#part1, #part2 {
+  display: none; }
+
 .header__text-box {
   margin-top: 1.2rem; }
 
