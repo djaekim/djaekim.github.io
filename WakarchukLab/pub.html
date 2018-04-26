@@ -19,6 +19,19 @@
         ::-webkit-scrollbar {
             display: none;
         }
+
+        h1 a {
+            color: black !important;
+            font-size: 2.5rem;
+            line-height: 0.8;
+        }
+
+        p {
+            font-size: 1.5rem !important;
+        }
+        .container{
+            border: 0.7rem solid #d8d8d8;
+        }
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -32,11 +45,10 @@
                     <span class="heading-primary--name">
 
                         Wakarchuk Lab
-                        <span style='color:#777;  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-                                  '> @Pub </span>
+                        <span> @Pub </span>
                     </span>
                     <span class="heading-primary--sub">
-                        <span style='color:#959595; font-weight:900'> Glycobiology Research at Ryerson University </span>
+                        <span style='color:rgb(225, 225, 225); font-weight:900'> Glycobiology Research at Ryerson University </span>
                     </span>
                 </h1>
             </div>
@@ -68,33 +80,41 @@
 
 
     <!-- about the instruments -->
-    <main style='margin-top:20rem'>
-        <section class="section-about">
-            <div class="pub-item">
+    <main style='margin-top:15rem'>
+        <span style='font-size:3rem;border-bottom:1px solid grey'>Recent Publications </span>
+        <br>
+        <span style='font-size:1.3rem; margin-bottom:2rem'>Complete list of all publications:
+            <a style='color:grey' target='_blank' href="https://scholar.google.ca/citations?user=cWMBiM4AAAAJ">Google Scholar</a>
+        </span>
+
+        <section class="section-about" style='margin-top:2rem'>
+            <div class="pub-item" id='pub-item-1'>
                 <div class='container'>
                     <div class="row">
                         <div class="col-md-1">
-                            <h3>2017</h2>
+                            <h3>2018</h2>
                         </div>
                         <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-12 pub-title">
-                                    <h1> X-ray crystallographic structure of a bacterial polysialyltransferase provides insight into the biosynthesis of capsular polysialic acid</h1>
+                                    <h1>
+                                        <a href='https://www.biorxiv.org/content/early/2018/01/25/254235.abstract' target='_blank'>
+                                            Genetics behind the biosynthesis of nonulosonic acid containing lipooligosaccharides in Campylobacter coli </a>
+                                    </h1>
                                 </div>
                                 <div class="col-md-12 pub">
                                     <h2>
                                         <span>Read Abstract</span>
                                     </h2>
-                                    <p>Polysialic acid (polySia) is a homopolymeric saccharide that is associated with some 
-                                            neuroinvasive pathogens and is found on selective cell types in their eukaryotic host. The 
-                                            presence of a polySia capsule on these bacterial pathogens helps with resistance to 
-                                            phagocytosis, cationic microbial peptides and bactericidal antibody production. The 
-                                            biosynthesis of bacterial polySia is catalysed by a single polysialyltransferase (PST) 
-                                            transferring sialic acid from a nucleotide-activated donor to a lipid-linked acceptor 
-                                            oligosaccharide. Here we present the X-ray structure of the bacterial PST from Mannheimia 
-                                            haemolytica serotype A2, thereby defining the architecture of this class of enzymes 
-                                            representing the GT38 family. The structure reveals a prominent electropositive groove 
-                                            between the two Rossmann-like domains forming the GT-B fold that is suitable for binding …
+                                    <p>Campylobacter jejuni and Campylobacter coli are the most common cause of bacterial gastroenteritis
+                                        in the world. Ganglioside mimicry by C. jejuni lipooligosaccharide (LOS) is the triggering
+                                        factor of Guillain-Barré syndrome (GBS), an acute polyneuropathy. Sialyltransferases
+                                        from the glycosyltransferase (GT) family 42 are essential for the expression of ganglioside
+                                        mimics in C. jejuni. Recently, two novel GT-42 genes, cstIV and cstV, have been identified
+                                        in C. coli. Despite being present in~ 11% of currently available C. coli genomes,
+                                        the biological role of cstIV and cstV is unknown. Here, we show that CstIV and CstV
+                                        are involved in LOS biosynthesis. Additionally, cstV is associated with LOS sialylation,
+                                        while cstIV is linked to the addition of a diacetylated nonulosonic acid residue.
                                     </p>
                                 </div>
                             </div>
@@ -103,14 +123,9 @@
                             <div class="row">
 
                                 <div class="col-md-12">
-                                    <h4>Nature Structural and Molecular Biology</h4>
-                                    <h2>Contributor</h2>
-                                    <ul>
-                                        <li>thomas</li>
-                                        <li>thomas</li>
-                                        <li>thomas</li>
-                                        <li>thomas</li>
-                                    </ul>
+                                    <h4>Cold Spring Harbor Laboratory</h4>
+
+
                                 </div>
                             </div>
 
@@ -121,7 +136,7 @@
 
 
             </div>
-            <div class="pub-item">
+            <div class="pub-item" id='pub-item-2'>
                 <div class='container'>
                     <div class="row">
                         <div class="col-md-1">
@@ -130,22 +145,26 @@
                         <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-12 pub-title">
-                                    <h1> X-ray crystallographic structure of a bacterial polysialyltransferase provides insight into the biosynthesis of capsular polysialic acid</h1>
+                                    <h1>
+                                        <a href="https://www.nature.com/articles/s41598-017-05627-z" target='_blank'> X-ray crystallographic structure of a bacterial polysialyltransferase provides insight
+                                            into the biosynthesis of capsular polysialic acid </a>
+                                    </h1>
                                 </div>
                                 <div class="col-md-12 pub">
                                     <h2>
                                         <span>Read Abstract</span>
                                     </h2>
-                                    <p>Polysialic acid (polySia) is a homopolymeric saccharide that is associated with some 
-                                            neuroinvasive pathogens and is found on selective cell types in their eukaryotic host. The 
-                                            presence of a polySia capsule on these bacterial pathogens helps with resistance to 
-                                            phagocytosis, cationic microbial peptides and bactericidal antibody production. The 
-                                            biosynthesis of bacterial polySia is catalysed by a single polysialyltransferase (PST) 
-                                            transferring sialic acid from a nucleotide-activated donor to a lipid-linked acceptor 
-                                            oligosaccharide. Here we present the X-ray structure of the bacterial PST from Mannheimia 
-                                            haemolytica serotype A2, thereby defining the architecture of this class of enzymes 
-                                            representing the GT38 family. The structure reveals a prominent electropositive groove 
-                                            between the two Rossmann-like domains forming the GT-B fold that is suitable for binding …
+                                    <p>Polysialic acid (polySia) is a homopolymeric saccharide that is associated with some
+                                        neuroinvasive pathogens and is found on selective cell types in their eukaryotic
+                                        host. The presence of a polySia capsule on these bacterial pathogens helps with resistance
+                                        to phagocytosis, cationic microbial peptides and bactericidal antibody production.
+                                        The biosynthesis of bacterial polySia is catalysed by a single polysialyltransferase
+                                        (PST) transferring sialic acid from a nucleotide-activated donor to a lipid-linked
+                                        acceptor oligosaccharide. Here we present the X-ray structure of the bacterial PST
+                                        from Mannheimia haemolytica serotype A2, thereby defining the architecture of this
+                                        class of enzymes representing the GT38 family. The structure reveals a prominent
+                                        electropositive groove between the two Rossmann-like domains forming the GT-B fold
+                                        that is suitable for binding …
                                     </p>
                                 </div>
                             </div>
@@ -154,14 +173,8 @@
                             <div class="row">
 
                                 <div class="col-md-12">
-                                    <h4>Nature Structural and Molecular Biology</h4>
-                                    <h2>Contributor</h2>
-                                    <ul>
-                                        <li>thomas</li>
-                                        <li>thomas</li>
-                                        <li>thomas</li>
-                                        <li>thomas</li>
-                                    </ul>
+                                    <h4>Nature Publishing Group</h4>
+
                                 </div>
                             </div>
 
@@ -198,6 +211,20 @@
         $('.close-abstract').click(function () {
             $('.pub p').slideUp();
         });
+        function fadeImage(str, length, i = 1) {
+
+            var time = setInterval(() => {
+                if (i == length) {
+                    clearInterval(time);
+                }
+                $(str + i).fadeIn();
+
+                i++;
+
+            }, 250);
+        }
+
+        fadeImage('#pub-item-', document.getElementsByClassName('pub-item').length);
 
 
     </script>
