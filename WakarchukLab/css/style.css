@@ -56,7 +56,7 @@ h6 {
   color: #822424; }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-bottom: 3rem;
   color: #777; }
 
@@ -106,14 +106,14 @@ img {
   /* optional: just make scrollbar invisible */ }
 
 /* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #FF0000; }
-
 .col {
   padding: 2rem 1.5rem; }
 
 .rounded-circle {
   border: 0.7rem solid #d8d8d8; }
+
+a {
+  color: white; }
 
 .navigation__toggle {
   position: absolute;
@@ -166,13 +166,35 @@ img {
 .featured-publication__item-title {
   margin-bottom: 1rem; }
 
+.member {
+  display: none; }
+
+.active {
+  background-color: #ababab; }
+
+.menu {
+  position: fixed;
+  width: 20rem; }
+  .menu h3 {
+    cursor: pointer; }
+
+#content-alumni {
+  display: none; }
+
+#content-photo {
+  display: none; }
+
+img {
+  border: 0.7rem solid #d8d8d8; }
+
+.rounded-circle {
+  border-radius: 0 !important; }
+
 .close-abstract {
   position: fixed;
-  top: 23vh;
+  top: 20rem;
   right: 5vh;
-  background-color: grey;
-  border-radius: 6%;
-  color: white;
+  background-color: #ababab;
   padding: 0.5rem;
   cursor: pointer;
   transition: 0.4s all;
@@ -211,13 +233,15 @@ img {
     padding: 0.2rem 0.4rem; }
 
 .pub-item {
+  display: none;
   padding: 1em 0rem; }
   .pub-item .container {
     background-color: white;
     padding: 2.5rem; }
 
 .pub-title h1 {
-  cursor: pointer; }
+  cursor: pointer;
+  line-height: 0.8; }
 
 .pub-title h1:hover {
   color: grey; }
@@ -305,14 +329,12 @@ p {
   color: black;
   color: white; }
   .heading-primary--name {
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    font-weight: 500;
     padding: 2rem; }
   .heading-primary--sub {
     display: block;
-    font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     padding: 1rem; }
 
 .figcaption__comment {
