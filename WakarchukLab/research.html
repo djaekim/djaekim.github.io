@@ -2,42 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/icon-font.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <title>Warren</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700, 800" rel="stylesheet">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
     <style>
         img {
-            width: 50rem;
-        }
 
-        p {
-            color: black !important;
-        }
-
-        span {
-            font-size: '1rem';
-            margin-bottom: '2rem';
-        }
-
-        img+h3 {
-            color: black !important;
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        img {
-            /*  border:1px solid transparent !important; */
-            border: 0.7rem solid #d8d8d8;
+            margin-bottom: 5em;
+            /* box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);        */
         }
     </style>
 
@@ -45,130 +29,254 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--name">
+    <div class='top-brand' style='z-index:99;'>
+        <h4> Wakarchuk Lab</h4>
 
-                        Wakarchuk Lab
-                        <span> @RES </span>
+    </div>
+    <div class="bottom-brand">
+        <ul class='arrow-ul'>
+            <li style='float:left;transform: scaleX(-1);'>
+                <a class='animated-arrow' href='index.html'>
+                    <span class='the-arrow -left'>
+                        <span class='shaft'></span>
                     </span>
-                    <span class="heading-primary--sub">
-                        <span style='color:rgb(225, 225, 225); font-weight:900'> Glycobiology Research at Ryerson University </span>
+                    <span class='main'>
+                        <span class='text' style='transform: scaleX(-1);'>
+                            Home!
+                        </span>
+                        <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                        </span>
                     </span>
-                </h1>
+                </a>
+
+            </li>
+            <li style='float:right'>
+                <a class='animated-arrow' href='pub.html'>
+                    <span class='the-arrow -left'>
+                        <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                        <span class='text'>
+                           Publication!
+                        </span>
+                        <span class='the-arrow -right'>
+                            <span class='shaft'></span>
+                        </span>
+                    </span>
+                </a>
+
+            </li>
+
+        </ul>
+    </div>
+    <div class="header" style='letter-spacing: .2em;'>
+        <h3>
+            Wakarchuk Lab
+        </h3>
+        <h1>glycobiology LAB</h1>
+    </div>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark" id="mainNav">
+        <div class="container" style='margin-bottom:5vh'>
+
+            <button id='button-collapse' class="navbar-toggler navbar-toggler-right" type="button" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <div class="menu">
+                            <span> MENU </span>
+                        </div> -->
+
+                <div class="menu">
+
+                </div>
+            
+            </button>
+            <div class="menu-button">
+                <div id="nav-icon4">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style='margin:0 auto;'>
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="research.html">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pub.html">Publication</a>
-                </li>
+            <div class='collapse' id="navbarResponsive">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="team.html">Team</a>
-                </li>
-            </ul>
+
+                <div class="container">
+                    <div class="row" style='border-bottom:1px solid white'>
+
+                        <div class="col-md-12">
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="links" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="links" href="research.html">Research</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="links" href="pub.html">Publication</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="links" href="team.html">Team</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <h4>EMAIL</h4>
+                            <p class='contact'>wwakarchuk@ryerson.ca</p>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <h4>CONTACT</h4>
+                            <div class="contact"> 350 Victoria Street, Toronto, Ontario, Canada M5B 2K3</div>
+                            <p class='contact'>(647-824-2995)</p>
+
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <h4>MEDIA</h4>
+                            <p id='twitter' class='contact'>
+                                <a href="https://twitter.com/WakarchukLab?ref_src=twsrc%5Etfw" target='_blank'>
+                                    <i class="fa fa-twitter" style="font-size:36px"></i>
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </nav>
-
-    <main style='margin-top:15rem'>
+    <section id='main'>
         <div class="container">
             <div class="row">
-                <div class="col-md-1">
-                    
-                    <h3 style='text-align:center'>
 
+                <div class="col-md-12 col-sm-12" style='margin-top:0rem'>
 
-                        <i class="arrow left" style='margin-right:2rem'></i>
-                        <i class="arrow right"></i>
-                        
-                    </h3>
-                    
-                </div>
-                <div class="col-md-11" style='text-align:center'>
-                    <div id="part0" class='story-active parts'>
-                        <p style='font-size:1.7rem'>Glycobiology is central to many important biological and biochemical processes. In particular, the
-                            interactions of cell surface glycoconjugates with other cells, proteins or pathogenic microorganisms.
-                            This process of molecular recognition is the result of interactions with many different binding
-                            partners with the carbohydrate structures driving the specificity of the interaction. Fundamental
-                            aspects of the function of these glycoconjugates are still not well understood. In order to determine
-                            the functions of these complex molecules we must be able to dissect the biosynthetic process
-                            find the control points in these processes and understand the interactions of glycoconjugates
-                            with their receptors.  An important aspect of this research is that the complex carbohydrates
-                            to probe these interactions are difficult to obtain from nature, and so need to be synthesized.
-                            Chemical synthesis of these is one approach, but remains difficult for many structures, so we
-                            have been developing enzymatic methods for this.</p>
-                        <img src="images/img1.png" alt="">
-                        <h3>
-                            Polysialyation of proteins to improve serum half-life</h3>
+                    <p style='font-size:1.7rem;'>
+                        Glycobiology is central to many important biological and biochemical processes. The interactions of cell surface glycoconjugates
+                        with other cells, proteins or pathogenic microorganisms. This process of molecular recognition is
+                        the result of interactions with many different binding partners with the carbohydrate structures
+                        driving the specificity of the interaction. Fundamental aspects of the function of these glycoconjugates
+                        are still not well understood. In order to determine the functions of these complex molecules we
+                        must be able to dissect the biosynthetic process find the control points in these processes and understand
+                        the interactions of glycoconjugates with their receptors. An important aspect of this research is
+                        that the complex carbohydrates to probe these interactions are difficult to obtain from nature, and
+                        so need to be synthesized. Chemical synthesis of these is one approach, but remains difficult for
+                        many structures, so we have been
+                        <strong> developing enzymatic methods </strong> for this.
 
+                    </p>
+
+                    <p>
+
+                        <h1 class='header' style='font-size:2em;margin-top:1em;color:#ea4235;text-align:center; letter-spacing:0.03em'>Polysialyation of proteins to improve serum half-life.</h1>
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-6 offset-md-3">
+                                    <img src="images/img1.png" style='width:100%' alt="Polysialyation  of  proteins  to  improve  serum  half-life.">
+                                </div>
+                                <div class="col-md-3 offset-md-0">
+                                    <p style='font-size:1.7rem;'> This image shows the stages in producing two proteins. And following the shift up the
+                                        gel which shows the addition of this modification. This modification keepstherapeutic
+                                        proteins in the blood longer, so they keep doing their job!</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </p>
+                    <div class="header">
+                        <h1 style='margin-top:1em;color:#ea4235'>Enzymes for Glycobiology?</h1>
                     </div>
-                    <div id="part1" class='parts'>
-                         
-                        <img src="images/img2.png" alt="">
-                        <h3>
-                            The first GT-52 sialyltransferase structure</h3>
-                        <p style='font-size:1.7rem'>Our research has been focused on the investigation of the structure and function of the enzymes involved
-                            in making various glycoconjugates. The lab studies bacterial enzymes which make carbohydrate
-                            structure mimics of the host they infect, as well as the corresponding eukaryotic enzymes. The
-                            determination of glycosyltransferase enzyme donor/acceptor specificity as well as contributing
-                            to the determination of the 3-dimensional structures has been the major area of research and
-                            will continue to be the focus of my collaborative research program.  We are also applying these
-                            enzymes to the synthesis of bioactive glycoconjugates for various therapeutic applications. Part
-                            of this work is the creation of designer enzymes for these applications.</p>
 
-                    </div>
-                    <div id="part2" class='parts'>
-                        <img src="images/img3.png" alt="">
-                        <p style='font-size:1.7rem'>The lab is working on a protein glycosylation system (O-mannosylation) in these organisms which has
-                            similarities to protein O-mannosylation all the way up the evolutionary ladder.  We are using
-                            glycoproteomics to examine this modification. The fundamental question is what does this protein
-                            modification do for these bacteria? We are applying synthetic biology to address the biochemistry
-                            this complex problem in the hope we can uncover fundamental knowledge of this glycosylation process.
+                    <p>
+
+                        <p style='font-size:1.7rem;'> Our research has been focused on the investigation of the structure and function of the
+                            <strong>enzymes involved in making various glycoconjugates.</strong> The lab studies bacterial enzymes
+                            which make carbohydrate structure mimics of the host they infect, as well as the corresponding
+                            eukaryotic enzymes. The determination of glycosyltransferase enzyme donor/acceptor specificity
+                            as well as contributing to the
+                            <strong>determination of the 3-dimensional structures</strong> has been the major area of research and
+                            will continue to be the focus of my collaborative research program. We are also applying these
+                            enzymes to the synthesis of bioactive glycoconjugates for various therapeutic applications.
+                            <strong>
+                                Part of this work is the creation of designer enzymes for these applications.</strong>
                         </p>
 
+                    </p>
+                    <p>
+
+                        <h1 class='header' style='font-size:2em;margin-top:1em;color:#ea4235;text-align:center; letter-spacing:0.03em'>The first GT-52 sialyltransferase structure. </h1>
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-6 offset-md-3">
+                                    <img src="images/img2.png" style='width:100%' alt="PThe first GT-52 sialyltransferase structure">
+                                </div>
+                                <div class="col-md-3 offset-md-0">
+                                    <p style='font-size:1.7rem;'> This protein is from the bacterial pathogen Neisseria meningitidis, one of the bacteria
+                                        that cause meningitis. This enzyme has two identical halves which combine to make
+                                        the active enzyme. The structure made by this enzyme help protect the bacteria from
+                                        the immune system.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </p>
+                    <div class="header">
+                        <h1 style='margin-top:1em;color:#ea4235'>Synthetic biology and its application for Glycobiology?</h1>
                     </div>
+
+                    <p style='font-size:1.7rem; padding-bottom:10em'>
+                        We have been working on improving therapeutic proteins through their glycosylation. We have been engineering in vivo protein
+                        glycosylation through improving landing sites for glycosyltransferases. Our work includes synthetic
+                        operons to add biosynthetic pathways for glycosylation in host organisms. The lab is working on a
+                        natural protein glycosylation system(O-mannosylation) in bacteria which has is conserved all the
+                        way up the evolutionary ladder. The fundamental question is what does this protein modification do
+                        for these bacteria?We are applying synthetic biology and glycoproteomics to address this complex
+                        problem in the hope we can uncover fundamental knowledge of this glycosylation process. </p>
+
+
                 </div>
+
+
+
+
             </div>
         </div>
-    </main>
+    </section>
+
     <script src="js/jquery-1.7.min.js"></script>
     <script>
-        var i = 0;
-        $('.right').click(function () {
-            if (i < 2) {
-                var counter = ++i;
-                console.log(counter);
+        $(document).ready(function () {
+            $('.menu-button').click(function () {
+                console.log('nob')
+                $('#nav-icon4').toggleClass('open');
+                $('.menu').toggleClass('scale');
+                $('.collapse').fadeToggle(50);
+            });
 
-                $('.parts').slideUp();
-                $('#part' + i).slideDown();
-            }
-
-
-        })
-        $('.left').click(function () {
-
-            if (i > 0) {
-                var counter = --i;
-                $('.parts').slideUp();
-                $('#part' + i).slideDown();
-            }
+            var scrollTop = 0;
+            $(window).scroll(function () {
+                scrollTop = $(window).scrollTop();
 
 
-        })
+                if (scrollTop >= 100) {
+                    $('.top-brand').addClass('scrolled-nav');
+                    $('.top-brand h4').fadeIn();
+                } else if (scrollTop < 100) {
+                    $('.top-brand').removeClass('scrolled-nav');
+                    $('.top-brand h4').fadeOut();
+                }
+
+            });
+
+        });
     </script>
-
 
 
 
