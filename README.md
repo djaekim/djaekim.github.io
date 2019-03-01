@@ -27,7 +27,7 @@
 <a target="_blank" href="https://djaekim.github.io/BudgetApp/"> DEMO </a>
 
 <h1> PureCSSTennisWebsiteDesign </h1>
-<p> This is a landing page for passionate tennis players who are willing travel the world to play tennis.
+<p> This is a landing page for passionate tennis players who are willing travel the world to play tennis. I was following a course on Udemy for SASS.
 </p>
 <p> This is a pure CSS3 driven website. For full experience of the website, Google Chrome is suggested as some features not being supported. </p>
 <a target="_blank" href="https://djaekim.github.io/PureCSSTennisWebsiteDesign/"> DEMO </a>
