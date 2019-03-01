@@ -16,18 +16,16 @@
 <a target="_blank" href="http://antonesculab.com/"> DEMO </a>
 
 <h1> Wakarchuk Lab </h1>
-<p> Wakarchuk Lab is a research website that I am currently biulding for the chair of Molecular Biology department at Ryerson University, Toronto. 
-</p>
 <a target="_blank" href="http://www.wakarchuklab.com/"> DEMO </a>
 
 <h1>  Budget App </h1>
-<p> This app allows you to calculate your budget.
+<p> This app allows you to calculate your budget. 
 </p>
-<p> It's built using Javascript. I demonstrated MVC framework, Dynamic DOM manipulation, Prototypical inheritance and adding event listener for dynamically added DOM. </p>
+<p> I followed a course on Udemy. It is implemented using MVC framework withh dynamic DOM manipulation, prototypical inheritance and adding event listener for dynamically added DOM. </p>
 <a target="_blank" href="https://djaekim.github.io/BudgetApp/"> DEMO </a>
 
 <h1> PureCSSTennisWebsiteDesign </h1>
-<p> This is a landing page for passionate tennis players who are willing travel the world to play tennis. I was following a course on Udemy for SASS.
+<p> This is a landing page for passionate tennis players who are willing travel the world to play tennis. I was following a course on Udemy to learn SASS.
 </p>
 <p> This is a pure CSS3 driven website. For full experience of the website, Google Chrome is suggested as some features not being supported. </p>
 <a target="_blank" href="https://djaekim.github.io/PureCSSTennisWebsiteDesign/"> DEMO </a>
