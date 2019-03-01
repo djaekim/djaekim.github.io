@@ -6,7 +6,7 @@
 <p> BotelhoLab is a research website I built for professor Roberto Botelho organelle research group at Ryerson University, Toronto. 
 </p>
 <p>It's built with HTML, CSS, Jquery. It's also fully responsive, using desktop approach and supports cross browser compatibility</p>
-<a target="_blank" href="https://djaekim.github.io/AntonescuLab/index.html"> DEMO </a>
+<a target="_blank" href="http://botelholab.com/"> DEMO </a>
 
 
 <h1> Antonescu Lab </h1>
@@ -18,7 +18,7 @@
 <h1> Wakarchuk Lab </h1>
 <p> Wakarchuk Lab is a research website that I am currently biulding for the chair of Molecular Biology department at Ryerson University, Toronto. 
 </p>
-<p> <strong> This is a work in progress </strong> . I am using SASS + Angular + CSS3 </p>
+<a target="_blank" href="http://www.wakarchuklab.com/"> DEMO </a>
 
 <h1>  Budget App </h1>
 <p> This app allows you to calculate your budget.
