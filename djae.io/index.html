@@ -79,14 +79,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#publications">Publications</a>
           </li>
-
-          <!-- <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a>
-          </li> -->
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#interests">Interests</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Freelancer</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#interests">Adventures</a>
           </li>
 
 
@@ -121,18 +120,52 @@
     </div>
 
 
-
-
-    <!-- <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-0">
-      <h5 class='resume' style='display:inline-block;padding:5px; cursor:pointer; color:white'>
-          <i class="fa fa-2x fa-file-text-o"></i> 
-          <br>
-          Resume
-      </h5>
-    </a> -->
-
-
   </header>
+  <section class="portfolio" id="publications">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Publications</h2>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 style="text-align:left">
+              [Conference] An Empirical Study on the Evolution of Test Smell
+            </h4>
+            <div class="row">
+              <div class="col-md-12">
+                
+                <h6 style="text-align:left; color:#3170A5">
+                  Dong Jae Kim, Tse-Hsun (Peter) Chen, Jinqiu Yang
+                </h6>
+                <h6 style="text-align:left; color:#090">
+                  International Conference on Software Engineering (ICSE 2020)
+                </h6>
+              </div>
+              <div class="col-md-12">
+                <button class="btn btn-primary btn-outline btn-xs abstract">  
+                    ABSTRACT
+                </button>
+                <button class="btn btn-primary btn-outline btn-xs">  
+                    <a style="color:white" href="img/EvolutionOfTestSmell.pdf">PDF</a>
+               </button>
+              </div>
+              <div class="col-md-12 content" style="display:none">
+                <br>
+                <h5 style='color:red'>Abstract</h5>
+                <h6>
+                  Test smell as analogous to code smell is a poor design choice in the implementation of test code. Recently, the concept of test smell has become the utmost interest of researchers and practitioners. Surveys show that developers' are aware of test smells and their potential consequences in the software system. However, there is limited empirical evidence for how developers address test smells during software evolution. Thus, in this paper, we study 2 research questions: (RQ1) How do test smells evolve? (RQ2) What is the motivation for removing test smells? Our result shows that Assertion Roulette, Conditional Test Logic and Unknown tests have a high rate of churns, the feature addition and improvement motivate refactoring, but test smell persists, implicating sub-optimal practice. In our study, we hope to fill the gap between academia and industry by providing evidence of sub-optimal practice in the way developers address test smells, and how it may be detrimental to the software.
+                </h6>
+              </div>
+            </div>
+              
+          </div>
+        </div>
+    </div>
+  </section>
+
 
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
@@ -230,7 +263,7 @@
   <!-- interests -->
   <section class="portfolio" id="interests">
     <div class="container">
-      <h2 class="text-center text-uppercase text-secondary mb-0">Interests</h2>
+      <h2 class="text-center text-uppercase text-secondary mb-0">Adventures</h2>
       <br>
       <br>
       <br>
@@ -677,7 +710,15 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script>
 
+    $( document ).ready(function() {
+        $('.abstract').on("click", (e)=>{  
+          $(".content").slideToggle()
+      })
+    });
+
+  </script>
 
 
   <!-- Custom scripts for this template -->
