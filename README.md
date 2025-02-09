@@ -13,7 +13,6 @@
 <p> AntonescuLab is a research website I built for professor Costin Antonescu's cell surface biology group at Ryerson University, Toronto. 
 </p>
 <p>It's built with HTML, CSS, Jquery. It's also fully responsive, using desktop approach and supports cross browser compatibility</p>
-<a target="_blank" href="http://antonesculab.com/"> DEMO </a>
 
 <h1> Wakarchuk Lab </h1>
 <a target="_blank" href="http://www.wakarchuklab.com/"> DEMO </a>
